@@ -13,6 +13,7 @@ html {
 	height: 100%;
 	overflow: hidden;
 }
+
 body {
 	margin: 0;
 	padding: 0;
@@ -21,12 +22,14 @@ body {
 	background-color: #fff;
 	font-family: UniSansSemiBold;
 }
+
 #oncanvas-menu {
 	width: 52px;
 	height: inherit;
 	float: right;
 	background-color: #fff;
 }
+
 #grid_container {
 	width: calc(100% - 53px);
     width: -webkit-calc(100% - 53px);
@@ -37,6 +40,7 @@ body {
 	float: left;
 	margin: auto;
 }
+
 #grid_content {
 	width: calc(100% - 30px);
     width: -webkit-calc(100% - 30px);
@@ -50,6 +54,7 @@ body {
 	display: block;
     position: relative;
 }
+
 #grid_desc {  /* ----- PROJECT DESCRIPTION WITH MEDIA SCALING ----- */
     width: calc(100% - 30px);
     width: -webkit-calc(100% - 30px);
@@ -61,20 +66,32 @@ body {
     background-color: #fff;
     position: relative;
 }
+
+/*------------------------------------------------------------------- */
+/* RESPONSIVE */
+
 @media screen and (min-width:480px) {
-    #grid_desc {
+
+	#grid_desc {
         width:70%;
     }
+
 }
+
 @media screen and (min-width:600px) {
+
     #grid_desc {
         width:55%;
     }
+
 }
+
 @media screen and (min-width:1200px) {
-    #grid_desc {
+
+	#grid_desc {
         width:40%;
     }
+
 }
 
 
@@ -117,6 +134,7 @@ body {
     visibility: hidden; /* hide checkbox */
     z-index: 1000;
 }
+
 #toggle {
     position: relative;
     width: inherit;
@@ -124,9 +142,9 @@ body {
     top:2px;
     z-index: 1;
     display: inline-block;
-
 }
-.bar1,  .bar2 {
+
+.bar1, .bar2 {
     display: block;
     position: relative;
     cursor: pointer;
@@ -138,15 +156,17 @@ body {
     transition: 0.4s;
     z-index: 2;
 }
+
 .change .bar1  {
     -webkit-transform: rotate(-45deg) translate(-1px, 0px) ;
     transform: rotate(-45deg) translate(-1px, -0px) ;
-
 }
+
 .change .bar2 {
     -webkit-transform: rotate(45deg) translate(-7px, -6px);
     transform: rotate(45deg) translate(-7px, -6px);
 }
+
 #togglebox:checked ~ #contentarea{
     margin-left: 0px;
     transform: translate3d(-250px,0,0); /* shift contentarea */
@@ -154,12 +174,14 @@ body {
 	-webkit-transition: all 0.3s  linear;
     z-index: 1;
 }
+
 #togglebox:checked ~ #offcanvas-menu{ /* nav state when checkbox is checked */
     transform: translate3d(0,0,0);
 	-webkit-transform: translateX(0); /* safari compatability */
     visibility: visible ; /* cross browser support */
 	-webkit-transition: all 0.3s linear;
 }
+
 .logo {  /* centre alignment class */
 	display: block;
 	margin: auto;
@@ -170,27 +192,33 @@ body {
     -webkit-transform: translateY(-100px);
     z-index: 1;
 }
+
 .logoscaler {
     width: 100%;
 }
 
+
 /*------------------------------------------------------------------- */
 /* STYLING CSS */
+
 .imgfill {
 	width:100%;
     display:  block;
     margin:  0;
     -webkit-transition: all 0.4s linear;
 }
+
 .imgfill:hover {
 	opacity: 0.3;
 	-webkit-transition: all 0.4s linear;
 }
+
 .staticimg {
     width:100%;
     display: block;
     margin:0px;
 }
+
 .UniSansBook {
 	font-family: UniSansBook;
 	font-weight: lighter;
@@ -198,6 +226,7 @@ body {
     color: #3737ff;
     font-size: 15px;
 }
+
 .UniSansSemiBold {
 	font-family: UniSansSemiBold;
 	font-weight: normal;
@@ -205,6 +234,7 @@ body {
     color: #3737ff;
     font-size: 15px;
 }
+
 p {
     font-family: UniSansSemiBold;
 	font-weight: normal;
@@ -212,6 +242,7 @@ p {
     color: #3737ff;
     font-size: 15px;
 }
+
 #grid_content .overlay {
     position: absolute;
 	left: 5%;
@@ -226,20 +257,25 @@ p {
     top: 45%;
     -webkit-transition: all 0.3s linear;
 }
+
 #grid_content:hover .overlay {
     opacity: 1;
 	-webkit-transition: all 0.4s linear;
 }
+
 a:link, a:visited, a:hover{
     color:#3737ff;
 }
+
 a:active {
     color:rgba(55, 55, 255, 0.70);
 }
+
 ::selection {
     background:rgba(72,61,139, 0.9); /* WebKit/Blink Browsers */
     color:aqua;
 }
+
 ::-moz-selection {
     background:rgba(72,61,139, 0.9); /* Gecko Browsers */
     color:aqua;
