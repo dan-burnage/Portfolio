@@ -1,0 +1,19 @@
+::-webkit-scrollbar{
+	width: 4px;
+}
+
+::-webkit-scrollbar-track-piece{
+	background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb{
+	background-color: rgba(55, 55, 255, 0.70);
+	outline: 0px solid #3737ff;
+	outline-offset: -2px;
+	border: 0px solid #fff;
+	border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+	background-color: #3737ff;
+}

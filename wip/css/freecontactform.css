@@ -1,0 +1,43 @@
+.required_star {
+    font-weight: 700;
+    color:#f6921d;
+}
+input, textarea {
+    display: block;
+    width: 95%;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    border: 1px solid #f6921d;
+    padding: 7px;
+    font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	font-style: normal;
+    color: #313031;
+    font-size: 14px;
+    border-radius: 0;
+    -webkit-appearance: none;
+}
+textarea {
+    height:250px;
+}
+.submit_button {
+    background-color: #f6921d;
+    color: #fff;
+	font-weight: 700;
+    font-size: 16px;
+    border: 0;
+    margin-top:5px;
+    margin-bottom: 0px;
+    padding: 7px;
+    cursor: pointer;
+}
+.subtext {
+    font-weight: 400;
+    font-size: 10px;
+    margin-top: 10px;
+}
+@media (orientation:portrait) {
+    input, textarea {
+        width:91%;
+    }
+}
