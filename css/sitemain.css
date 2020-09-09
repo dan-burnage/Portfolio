@@ -7,6 +7,7 @@
 */
 
 /*------------------------------------------------------------------- */
+
 /* LAYOUT CSS */
 
 html {
@@ -50,7 +51,7 @@ body {
 	margin: auto;
 	margin-top: 17px;
 	margin-left: 17px;
-	background-color: #3737ff;
+	background-color: #222222;
 	display: block;
 	position: relative;
 }
@@ -155,7 +156,7 @@ body {
 	cursor: pointer;
 	width: 30px;
 	height: 4px;
-	background-color: #3737ff;
+	background-color: #222222;
 	margin: 6px auto;
 	top: 10px;
 	transition: 0.4s;
@@ -234,7 +235,7 @@ body {
 	font-family: UniSansBook;
 	font-weight: lighter;
 	font-style: normal;
-	color: #3737ff;
+	color: #222222;
 	font-size: 15px;
 }
 
@@ -242,7 +243,7 @@ body {
 	font-family: UniSansSemiBold;
 	font-weight: normal;
 	font-style: normal;
-	color: #3737ff;
+	color: #222222;
 	font-size: 15px;
 }
 
@@ -250,7 +251,7 @@ p {
 	font-family: UniSansSemiBold;
 	font-weight: normal;
 	font-style: normal;
-	color: #3737ff;
+	color: #222222;
 	font-size: 15px;
 }
 
@@ -277,21 +278,21 @@ p {
 a:link,
 a:visited,
 a:hover {
-	color: #3737ff;
+	color: #222222;
 }
 
 a:active {
-	color: rgba(55, 55, 255, 0.70);
+	color: rgba(35, 35, 35, 0.70);
 }
 
 ::selection {
-	background: rgba(72, 61, 139, 0.9);
+	background: rgba(35, 35, 35, 0.70);
 	/* WebKit/Blink Browsers */
-	color: aqua;
+	color: #fff;
 }
 
 ::-moz-selection {
-	background: rgba(72, 61, 139, 0.9);
+	background: rgba(35, 35, 35, 0.70);
 	/* Gecko Browsers */
-	color: aqua;
+	color: #fff;
 }

@@ -5,31 +5,31 @@
 
 <head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 	<title>Dan Burnage | Designer</title>
 
-    <meta name="description" content="Freelance designer based in Cambrdige specialising in brand and identity design">
-    <meta name="theme-color" content="#222222">
+	<meta name="description" content="Freelance designer based in Cambrdige specialising in brand and identity design">
+	<meta name="theme-color" content="#222222">
 
-    <!-- Open Graph data -->
-    <meta property="og:title" content="Dan Burnage | Designer">
-    <meta property="og:url" content="https://www.danburnage.com/">
-    <meta property="og:type" content="website">
-    <meta property="og:description" content="Freelance designer based in Cambrdige specialising in brand and identity design">
-    <meta property="og:image" content="">
+	<!-- Open Graph data -->
+	<meta property="og:title" content="Dan Burnage | Designer">
+	<meta property="og:url" content="https://www.danburnage.com/">
+	<meta property="og:type" content="website">
+	<meta property="og:description" content="Freelance designer based in Cambrdige specialising in brand and identity design">
+	<meta property="og:image" content="">
 
-    <!-- Twitter card data -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="">
-    <meta name="twitter:title" content="Dan Burnage | Designer">
-    <meta name="twitter:description" content="Freelance designer based in Cambrdige specialising in brand and identity design">
-    <meta name="twitter:image" content="">
+	<!-- Twitter card data -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="">
+	<meta name="twitter:title" content="Dan Burnage | Designer">
+	<meta name="twitter:description" content="Freelance designer based in Cambrdige specialising in brand and identity design">
+	<meta name="twitter:image" content="">
 
-    <!-- Favicons -->
-    <link rel="shortcut icon" href="/static/favicons/favicon.ico" type="image/x-icon">
+	<!-- Favicons -->
+	<link rel="shortcut icon" href="/static/favicons/favicon.ico" type="image/x-icon">
 	<link rel="apple-touch-icon" sizes="57x57" href="/_____.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="/_____.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="/_____.png">
@@ -58,6 +58,7 @@
 		function myFunction(x) {
 			x.classList.toggle("change");
 		}
+
 	</script>
 
 	<!--
@@ -91,7 +92,8 @@
 
 
 
-<body> <!-- BODY START TAG -->
+<body>
+	<!-- BODY START TAG -->
 
 	<input type="checkbox" id="togglebox" />
 
@@ -101,7 +103,7 @@
 
 		<!-- SIBLING #2 -->
 
-		<p> Hi &#128075; ... I'm Dan Burnage, a designer specialising in communication, branding and identity design  with experience working both inhouse, agency-side and as a freelancer.</p>
+		<p> Hi &#128075; ... I'm Dan Burnage, a designer specialising in communication, branding and identity design with experience working both inhouse, agency-side and as a freelancer.</p>
 
 		<p>So you appear to have found yourself on my website, a showcase of select projects I have worked on both independently and for past clients or employers. Having worked as part of an internal design team and for a creative agency, I have experience in working to plan and deliver multi-channel marketing campaigns, brand identities, brand guidelines, websites, motion graphics and much more. </p>
 
