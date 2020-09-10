@@ -110,33 +110,17 @@
 
 
 	<body>
-		<!-- BODY START TAG -->
 
 		<input type="checkbox" id="togglebox" />
 
-		<!-- SIBLING #1 -->
-
 		<nav id="offcanvas-menu" class="UniSansSemiBold">
 
-			<!-- SIBLING #2 -->
-
-			<p> Hi &#128075; ... I'm Dan Burnage, a designer specialising in communication, branding and identity design with experience working both inhouse, agency-side and as a freelancer.</p>
-
-			<p>So you appear to have found yourself on my website, a showcase of select projects I have worked on both independently and for past clients or employers. Having worked as part of an internal design team and for a creative agency, I have experience in working to plan and deliver multi-channel marketing campaigns, brand identities, brand guidelines, websites, motion graphics and much more. </p>
-
-			<p>Want to find gout more about my previous projects? Then don't hesitate to get in touch with the details below and we can grab a coffee &#9749; to talk about future projects, how I can help you, or even just to chat about design. </p>
-
-			<p></p>
-
-			<p>info@danburnage.com</p>
-
-			<p>+44 (0) 7749 999022</p>
+			<cms:get_custom_field 'about_me' masterpage='about_me.php' />
 
 		</nav>
 
-		<div id="contentarea">
 
-			<!-- SIBLING #3 -->
+		<div id="contentarea">
 
 			<div id="grid_container">
 
