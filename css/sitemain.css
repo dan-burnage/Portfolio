@@ -56,6 +56,19 @@ body {
 	position: relative;
 }
 
+#video_wrapper {
+	width: calc(100% - 30px);
+	width: -webkit-calc(100% - 30px);
+	width: -moz-calc(100% - 30px);
+	margin: auto;
+	margin-top: 17px;
+	margin-left: 17px;
+	padding-bottom: calc(56.25% - 17px);
+	padding-bottom: -webkit-calc(56.25% - 17px);
+	padding-bottom: -moz-calc(56.25% - 17px);
+	position: relative;
+}
+
 #grid_desc {
 	/* ----- PROJECT DESCRIPTION WITH MEDIA SCALING ----- */
 	width: calc(100% - 30px);
@@ -229,6 +242,12 @@ body {
 	width: 100%;
 	display: block;
 	margin: 0px;
+}
+
+.video {
+	position: absolute;
+	width: 100%;
+	height: 100%;
 }
 
 .UniSansBook {

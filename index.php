@@ -2,10 +2,11 @@
 
 <cms:template title='Portfolio' clonable='1'>
 
-	<cms:editable name='project_description' type='richtext' />
-	<cms:editable name='project_heroimage' type='image' />
+	<cms:editable name='project_description' type='richtext' order='3'/>
+	<cms:editable name='project_heroimage' type='image' order='4'/>
+	<cms:editable name='project_video' type='text' no_xss_check='1' order='5'/>
 
-	<cms:repeatable name='project_images'>
+	<cms:repeatable name='project_images' order='6'>
 
 		<cms:editable type='image' name='image' label='Project Images' />
 
@@ -129,6 +130,16 @@
 					<cms:show project_description />
 
 				</div>
+
+				<cms:if project_video >
+
+					<div id="video_wrapper">
+
+						<iframe src="<cms:show project_video />" frameborder="0" allowfullscreen class="video"></iframe>
+
+					</div>
+
+				</cms:if>
 
 				<div id="grid_content">
 
