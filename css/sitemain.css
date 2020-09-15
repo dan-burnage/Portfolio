@@ -258,7 +258,7 @@ body {
 	font-size: 15px;
 }
 
-.UniSansSemiBold {
+p {
 	font-family: UniSansSemiBold;
 	font-weight: normal;
 	font-style: normal;
@@ -266,12 +266,8 @@ body {
 	font-size: 15px;
 }
 
-p {
-	font-family: UniSansSemiBold;
-	font-weight: normal;
-	font-style: normal;
-	color: #222222;
-	font-size: 15px;
+.copyright {
+	font-size: 12px;
 }
 
 #grid_content .overlay {

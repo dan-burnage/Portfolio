@@ -29,27 +29,7 @@
 	<meta name="twitter:description" content="Freelance designer based in Cambrdige specialising in brand and identity design">
 	<meta name="twitter:image" content="">
 
-	<!-- Favicons -->
-	<link rel="shortcut icon" href="/static/favicons/favicon.ico" type="image/x-icon">
-	<link rel="apple-touch-icon" sizes="57x57" href="/_____.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="/_____.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="/_____.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="/_____.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="/_____.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="/_____.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="/_____.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="/_____.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="/_____.png">
-	<link rel="icon" type="image/png" href="/_____.png" sizes="16x16">
-	<link rel="icon" type="image/png" href="/_____.png" sizes="32x32">
-	<link rel="icon" type="image/png" href="/_____.png" sizes="96x96">
-	<link rel="icon" type="image/png" href="/_____.png" sizes="192x192">
-	<link rel="icon" type="image/png" href="/_____.png" sizes="192x192">
-
-	<meta name="msapplication-square70x70logo" content="/_____/smalltile.png">
-	<meta name="msapplication-square150x150logo" content="/_____/mediumtile.png">
-	<meta name="msapplication-wide310x150logo" content="/_____/widetile.png">
-	<meta name="msapplication-square310x310logo" content="/_____/largetile.png">
+	<cms:embed 'favicons.html' />
 
 	<link href="css/sitemain.css" rel="stylesheet" type="text/css">
 	<link href="css/webkit.scrollbar.css" rel="stylesheet" type="text/css">
@@ -62,42 +42,16 @@
 
 	</script>
 
-		<!--
-		/**
-		* @license
-		* MyFonts Webfont Build ID 3074987, 2015-08-13T06:49:36-0400
-		*
-		* The fonts listed in this notice are subject to the End User License
-		* Agreement(s) entered into by the website owner. All other parties are
-		* explicitly restricted from using the Licensed Webfonts(s).
-		*
-		* You may obtain a valid license at the URLs below.
-		*
-		* Webfont: UniSansBook by Fontfabric
-		* URL: http://www.myfonts.com/fonts/font-fabric/uni-sans/book/
-		*
-		* Webfont: UniSansSemiBold by Fontfabric
-		* URL: http://www.myfonts.com/fonts/font-fabric/uni-sans/semi-bold/
-		*
-		*
-		* License: http://www.myfonts.com/viewlicense?type=web&buildid=3074987
-		* Licensed pageviews: 20,000
-		* Webfonts copyright: Copyright (c) 2014 by &#x00A9; 2009 Designed by Svetoslav Simov
-		* &#x00A9; Fontfabric, Inc. All rights reserved.
-		*
-		* © 2015 MyFonts Inc
-		*//
-		-->
+	<cms:embed 'font-copyright.html' />
 
 </head>
-
 
 
 <body>
 
 	<input type="checkbox" id="togglebox" />
 
-	<nav id="offcanvas-menu" class="UniSansSemiBold">
+	<nav id="offcanvas-menu">
 
 		<cms:get_custom_field 'about_me' masterpage='about_me.php' />
 
@@ -127,28 +81,14 @@
 			<!-- --------- -->
 
 			<div id="grid_desc">
-				<p class="UniSansSemiBold" style="font-size:12px;">Copyright &copy; 2020 &ndash; Dan Burnage</p>
+
+				<p class="copyright" >Copyright &copy; <cms:date format='Y'/> &ndash; Dan Burnage</p>
+
 			</div>
 
 		</div>
 
-		<div id="oncanvas-menu">
-
-			<label for="togglebox" style="width: 100%;">
-
-				<div id="toggle" onclick="myFunction(this)">
-
-					<div class="bar1"></div>
-					<div class="bar2"></div>
-					<div style="color:#222222; font-size:12.5px; line-height:30px; text-align:center; letter-spacing:1.5px;" class="UniSansSemiBold">INFO</div>
-
-				</div>
-
-			</label>
-
-			<a href="index.php" class="logo"><img src="img/logo.svg" class="logoscaler"></a>
-
-		</div>
+		<cms:embed 'menu.html' />
 
 	</div>
 
