@@ -14,6 +14,17 @@
 
 	</cms:repeatable>
 
+	<cms:editable name='seo_group' label='SEO information' desc='SEO, Open Graph and Twitter card data' type='group' order='7' />
+
+	<cms:editable name='page_title' label='Page title' desc='If different from global title' group='seo_group' type='text' />
+
+	<cms:editable name='seo_title' label='SEO title' desc='Recomended length: 55–60 characters' group='seo_group' type='text' />
+
+	<cms:editable name='seo_desc' label='SEO description' desc='Recomended length: 150–155 characters' group='seo_group' type='textarea' />
+
+	<cms:editable name='seo_img' label='SEO image' desc='Recomended size: 1200px x 630px' group='seo_group' type='image' />
+
+
 </cms:template>
 
 
@@ -29,31 +40,35 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-		<title>Dan Burnage | Designer</title>
+		<title>
 
-		<meta name="description" content="Freelance designer based in Cambrdige specialising in brand and identity design">
+			<cms:if page_title>
+				<cms:show page_title />
+				<cms:else />
+				Dan Burnage | Designer
+			</cms:if>
+
+
+		</title>
+
+		<meta name="description" content="<cms:show seo_desc />">
 		<meta name="theme-color" content="#222222">
 
 		<!-- Open Graph data -->
-		<meta property="og:title" content="Dan Burnage | Designer">
+		<meta property="og:title" content="<cms:show seo_title />">
 		<meta property="og:url" content="https://www.danburnage.com/">
 		<meta property="og:type" content="website">
-		<meta property="og:description" content="Freelance designer based in Cambrdige specialising in brand and identity design">
-		<meta property="og:image" content="">
+		<meta property="og:description" content="<cms:show seo_desc />">
+		<meta property="og:image" content="<cms:show seo_img />">
 
 		<!-- Twitter card data -->
 		<meta name="twitter:card" content="summary">
 		<meta name="twitter:site" content="">
-		<meta name="twitter:title" content="Dan Burnage | Designer">
-		<meta name="twitter:description" content="Freelance designer based in Cambrdige specialising in brand and identity design">
-		<meta name="twitter:image" content="">
+		<meta name="twitter:title" content="<cms:show seo_title />">
+		<meta name="twitter:description" content="<cms:show seo_desc />">
+		<meta name="twitter:image" content="<cms:show seo_img />">
 
 		<cms:embed 'favicons.html' />
-
-		<meta name="msapplication-square70x70logo" content="/_____/smalltile.png">
-		<meta name="msapplication-square150x150logo" content="/_____/mediumtile.png">
-		<meta name="msapplication-wide310x150logo" content="/_____/widetile.png">
-		<meta name="msapplication-square310x310logo" content="/_____/largetile.png">
 
 		<link href="css/sitemain.css" rel="stylesheet" type="text/css">
 		<link href="css/webkit.scrollbar.css" rel="stylesheet" type="text/css">
@@ -63,7 +78,6 @@
 			function myFunction(x) {
 				x.classList.toggle("change");
 			}
-
 		</script>
 
 		<cms:embed 'font-copyright.html' />
@@ -140,9 +154,10 @@
 
 	</html>
 
-
 	<cms:else />
+
 	<cms:embed 'list_view.php' />
+
 </cms:if>
 
 <?php COUCH::invoke(); ?>
