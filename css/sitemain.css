@@ -206,7 +206,7 @@ body {
 	-webkit-transition: all 0.3s linear;
 }
 
-.logo {
+.nav_logo {
 	/* centre alignment class */
 	display: block;
 	margin: auto;
@@ -215,13 +215,50 @@ body {
 	width: 35%;
 	transform: translateY(-100px);
 	-webkit-transform: translateY(-100px);
-	z-index: 1;
+	z-index: 1000;
 }
 
 .logoscaler {
 	width: 100%;
 }
 
+/*------------------------------------------------------------------- */
+/* INTRO SLIDE */
+
+#intro_slide {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	background-color: #222222;
+	animation: 0.75s cubic-bezier(0.75, 0, 0.5, 1) 1.5s 1 forwards intro_transition;
+}
+
+@keyframes intro_transition {
+
+	0% {
+		transform: translateX(0%);
+		-webkit-transform: translateX(0%)
+	}
+
+	100% {
+		transform: translateX(-100%);
+		-webkit-transform: translateX(-100%)
+	}
+
+}
+
+.intro_logo {
+	display: block;
+	margin: auto;
+	padding-top: 50vh;
+	width: 25%;
+	transform: translateY(-100px);
+	-webkit-transform: translateY(-100px);
+	z-index: 1000;
+}
 
 /*------------------------------------------------------------------- */
 /* STYLING CSS */

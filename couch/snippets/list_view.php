@@ -49,6 +49,12 @@
 
 <body>
 
+	<div id="intro_slide">
+
+		<img src="/img/marque.svg" class="intro_logo">
+
+	</div>
+
 	<input type="checkbox" id="togglebox" />
 
 	<nav id="offcanvas-menu">
