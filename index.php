@@ -88,6 +88,8 @@
 
 	<body>
 
+		<cms:embed 'slide.php' />
+
 		<input type="checkbox" id="togglebox" />
 
 		<nav id="offcanvas-menu">

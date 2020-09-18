@@ -36,24 +36,26 @@
 	<link rel="stylesheet" type="text/css" href="css/unisanspack/unisanspack.css">
 
 	<script>
+
 		function myFunction(x) {
+
 			x.classList.toggle("change");
+
 		}
 
 	</script>
 
 	<cms:embed 'font-copyright.html' />
 
+	<cms:set load_true="<cms:get_cookie 'load_true' />" />
+
+
 </head>
 
 
 <body>
 
-	<div id="intro_slide">
-
-		<img src="/img/marque.svg" class="intro_logo">
-
-	</div>
+	<cms:embed 'slide.php' />
 
 	<input type="checkbox" id="togglebox" />
 
