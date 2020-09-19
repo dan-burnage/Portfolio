@@ -30,7 +30,6 @@ body {
 	flex-wrap: wrap;
 	width: 52px;
 	height: inherit;
-	float: right;
 	background-color: #fff;
 }
 
@@ -40,16 +39,12 @@ body {
 	width: -moz-calc(100% - 53px);
 	height: inherit;
 	overflow: auto;
-	background-color: #fff;
-	float: left;
-	margin: auto;
 }
 
 #grid_content {
 	width: calc(100% - 30px);
 	width: -webkit-calc(100% - 30px);
 	width: -moz-calc(100% - 30px);
-	float: none;
 	overflow: hidden;
 	margin: auto;
 	margin-top: 17px;
@@ -72,23 +67,31 @@ body {
 	position: relative;
 }
 
+#flex_wrapper{
+	display: flex;
+	padding: 0 8vw;
+	max-width: 1300px;
+}
+
+#grid_title {
+	display: flex;
+	flex-wrap: wrap;
+	width: 40%;
+	position: relative;
+
+}
+
 #grid_desc {
-	/* ----- PROJECT DESCRIPTION WITH MEDIA SCALING ----- */
-	width: calc(100% - 30px);
-	width: -webkit-calc(100% - 30px);
-	width: -moz-calc(100% - 30px);
-	height: auto;
-	float: none;
-	margin-top: 15px;
-	margin-left: 18px;
-	background-color: #fff;
+	display: flex;
+	width: 60%;
+	margin: 2.2vw 0 1.6vw 2.8vw;
 	position: relative;
 }
 
 /*------------------------------------------------------------------- */
 /* RESPONSIVE */
 
-@media screen and (min-width:480px) {
+/*@media screen and (min-width:480px) {
 
 	#grid_desc {
 		width: 70%;
@@ -110,13 +113,14 @@ body {
 		width: 40%;
 	}
 
-}
+} */
 
 
 /*------------------------------------------------------------------- */
 /* NAVIGATION CSS */
 
 #contentarea {
+	display: flex;
 	position: relative;
 	width: 100%;
 	height: inherit;
@@ -127,23 +131,22 @@ body {
 
 #offcanvas-menu {
 	/* Full screen nav menu */
-	width: 250px;
+	width: 268px;
 	height: 100%;
 	top: 0;
 	right: 0;
 	z-index: 100;
 	visibility: hidden;
 	position: fixed;
-	transform: translate3d(250px, 0, 0);
-	-webkit-transform: translateX(250px);
+	transform: translate3d(268px, 0, 0);
+	-webkit-transform: translateX(268px);
 	-webkit-transition: all 0.3s linear;
 	box-sizing: border-box;
 	background: #fff;
 	display: block;
 	text-align: left;
 	overflow: auto;
-	padding: 15px;
-	padding-top: 0px;
+	padding: 0px 30px 0px 15px;
 }
 
 #togglebox {
@@ -196,9 +199,9 @@ body {
 
 #togglebox:checked ~ #contentarea {
 	margin-left: 0px;
-	transform: translate3d(-250px, 0, 0);
+	transform: translate3d(-268px, 0, 0);
 	/* shift contentarea */
-	-webkit-transform: translateX(-250px);
+	-webkit-transform: translateX(-268px);
 	/* safari compatability */
 	-webkit-transition: all 0.3s linear;
 	z-index: 1;
@@ -364,7 +367,18 @@ p {
 	font-weight: normal;
 	font-style: normal;
 	color: var(--brand-color);
-	font-size: 15px;
+	font-size: 16px;
+	line-height: 1.4em;
+}
+
+h1 {
+	font-family: UniSansSemiBold;
+	font-weight: normal;
+	font-style: normal;
+	color: var(--brand-color);
+	font-size: 52px;
+	line-height: 1.25em;
+	margin-bottom: 0em;
 }
 
 .copyright {

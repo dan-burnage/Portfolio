@@ -105,9 +105,30 @@
 
 			<div id="grid_container">
 
-				<div id="grid_desc">
+				<div id="flex_wrapper">
 
-					<cms:show project_description />
+
+					<div id="grid_title">
+
+						<span>
+
+							<h1><cms:show k_page_title /></h1>
+
+						</span>
+
+						<span>
+
+							<h5 style="text-transform:uppercase; letter-spacing:0.75px;">Branding &nbsp; | &nbsp; Print &nbsp; | &nbsp; Marketing</h5>
+
+						</span>
+
+					</div>
+
+					<div id="grid_desc">
+
+						<cms:show project_description />
+
+					</div>
 
 				</div>
 
