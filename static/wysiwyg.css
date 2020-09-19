@@ -1,0 +1,25 @@
+@charset "utf-8";
+/*------------------------------------------------------------------- */
+
+/*
+	Designed and Developed by Dan Burnage
+	Email: info@danburnage.com
+*/
+
+/*------------------------------------------------------------------- */
+
+/* WYSIWYG Richtext editor */
+
+body {
+	font-family: UniSansSemiBold;
+	font-weight: normal;
+	font-style: normal;
+	color: var(--brand-color);
+	background-color: #fff;
+	margin: 20px;
+}
+
+.cke_editable {
+	font-size: 15px;
+	line-height: 1.6em;
+}
