@@ -33,8 +33,8 @@
 
 	<cms:embed 'favicons.html' />
 
-	<link href="static/sitemain.css" rel="stylesheet" type="text/css">
-	<link href="fonts/unisanspack/unisanspack.css" rel="stylesheet" type="text/css">
+	<link href="/static/sitemain.css" rel="stylesheet" type="text/css">
+	<link href="/fonts/unisanspack/unisanspack.css" rel="stylesheet" type="text/css">
 
 	<cms:set load_true="<cms:get_cookie 'load_true' />" />
 
