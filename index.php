@@ -2,7 +2,7 @@
 
 <cms:template title='Portfolio' clonable='1'>
 
-	<cms:editable name='project_description' label='Project description' type='richtext' order='3' />
+	<cms:editable name='project_description' label='Project description' type='richtext' css='/static/wysiwyg.css | /fonts/unisanspack/unisanspack.css' order='3' />
 
 	<cms:editable name='project_heroimage' label='Hero image' type='image' order='4' />
 
@@ -55,11 +55,11 @@
 		</title>
 
 		<meta name="description" content="<cms:show seo_desc />">
-		<meta name="theme-color" content="#222222">
+		<meta name="theme-color" content="#111111">
 
 		<!-- Open Graph data -->
 		<meta property="og:title" content="<cms:show seo_title />">
-		<meta property="og:url" content="https://www.danburnage.com/">
+		<meta property="og:url" content="<cms:show k_page_link />">
 		<meta property="og:type" content="website">
 		<meta property="og:description" content="<cms:show seo_desc />">
 		<meta property="og:image" content="<cms:show seo_img />">
@@ -73,8 +73,8 @@
 
 		<cms:embed 'favicons.html' />
 
-		<link href="static/sitemain.css" rel="stylesheet" type="text/css">
-		<link href="fonts/unisanspack/unisanspack.css" rel="stylesheet" type="text/css">
+		<link href="/static/sitemain.css" rel="stylesheet" type="text/css">
+		<link href="/fonts/unisanspack/unisanspack.css" rel="stylesheet" type="text/css">
 
 		<cms:set load_true="<cms:get_cookie 'load_true' />" />
 
@@ -96,7 +96,7 @@
 
 		<nav id="offcanvas-menu">
 
-			<cms:get_custom_field 'about_me' masterpage='about_me.php' />
+			<cms:get_custom_field 'about_me' masterpage='globals.php' />
 
 		</nav>
 

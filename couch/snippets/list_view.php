@@ -14,24 +14,24 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-	<title>Dan Burnage | Designer</title>
+	<title><cms:get_custom_field 'page_title' masterpage='globals.php' /></title>
 
-	<meta name="description" content="Freelance designer based in Cambrdige specialising in brand and identity design">
-	<meta name="theme-color" content="#222222">
+	<meta name="description" content="<cms:get_custom_field 'seo_desc' masterpage='globals.php' />">
+	<meta name="theme-color" content="#111111">
 
 	<!-- Open Graph data -->
-	<meta property="og:title" content="Dan Burnage | Designer">
-	<meta property="og:url" content="https://www.danburnage.com/">
+	<meta property="og:title" content="<cms:get_custom_field 'seo_title' masterpage='globals.php' />">
+	<meta property="og:url" content="<cms:show k_page_link />">
 	<meta property="og:type" content="website">
-	<meta property="og:description" content="Freelance designer based in Cambrdige specialising in brand and identity design">
-	<meta property="og:image" content="">
+	<meta property="og:description" content="<<cms:get_custom_field 'seo_desc' masterpage='globals.php' />">
+	<meta property="og:image" content="<cms:get_custom_field 'seo_img' masterpage='globals.php' />">
 
 	<!-- Twitter card data -->
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:site" content="">
-	<meta name="twitter:title" content="Dan Burnage | Designer">
-	<meta name="twitter:description" content="Freelance designer based in Cambrdige specialising in brand and identity design">
-	<meta name="twitter:image" content="">
+	<meta name="twitter:title" content="<cms:get_custom_field 'seo_title' masterpage='globals.php' />">
+	<meta name="twitter:description" content="<cms:get_custom_field 'seo_desc' masterpage='globals.php' />">
+	<meta name="twitter:image" content="<cms:get_custom_field 'seo_img' masterpage='globals.php' />">
 
 	<cms:embed 'favicons.html' />
 
@@ -57,7 +57,7 @@
 
 	<nav id="offcanvas-menu">
 
-		<cms:get_custom_field 'about_me' masterpage='about_me.php' />
+		<cms:get_custom_field 'about_me' masterpage='globals.php' />
 
 	</nav>
 
