@@ -6,7 +6,7 @@
 
 	<cms:editable name='project_heroimage' label='Hero image' type='image' order='4' />
 
-	<cms:editable name='project_video' label='Video' desc='Video shown before hero image in list view.' type='text' no_xss_check='1' order='5' />
+	<cms:editable name='project_video' label='Video' desc='Check for correct Vimeo or YouTube embed link' type='text' no_xss_check='1' order='5' />
 
 	<cms:repeatable name='project_images' label='Project images' order='6'>
 
@@ -115,7 +115,7 @@
 
 					<div id="video_wrapper">
 
-						<iframe src="<cms:show project_video />" frameborder="0" allowfullscreen class="video"></iframe>
+						<iframe src="<cms:show project_video />" frameborder="0" allow="autoplay; fullscreen" allowfullscreen class="video"></iframe>
 
 					</div>
 
