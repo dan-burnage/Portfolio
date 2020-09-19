@@ -38,6 +38,8 @@
 
 		<!--INDEX.PHP — DETAILS TEMPLATE VIEW-->
 
+		<cms:embed 'gtag.html' />
+
 		<meta charset="utf-8">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -76,8 +78,8 @@
 
 		<cms:set load_true="<cms:get_cookie 'load_true' />" />
 
-		<script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
-		<script src ="/static/scripts/script.js"></script>
+		<script asyncsrc="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
+		<script async src ="/static/scripts/script.js"></script>
 
 		<cms:embed 'font-copyright.html' />
 
