@@ -1,6 +1,8 @@
 <cms:if load_true = 'true' >
 
-	<div id="transition_slide"></div>
+	<svg id="transition_slide"></svg>
+
+	<div id="swupBody" class="transition-swup"></div>
 
 <cms:else />
 
@@ -8,7 +10,7 @@
 
 	<div id="intro_slide">
 
-		<img src="/img/marque.svg" class="intro_logo">
+		<img src="/static/images/marque.svg" class="intro_logo">
 
 	</div>
 

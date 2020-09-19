@@ -6,6 +6,8 @@
 
 <head>
 
+	<!--LIST_VIEW.PHP — LIST VIEW-->
+
 	<meta charset="utf-8">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -31,23 +33,18 @@
 
 	<cms:embed 'favicons.html' />
 
-	<link href="css/sitemain.css" rel="stylesheet" type="text/css">
-	<link href="css/webkit.scrollbar.css" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" type="text/css" href="css/unisanspack/unisanspack.css">
+	<link href="static/sitemain.css" rel="stylesheet" type="text/css">
+	<link href="fonts/unisanspack/unisanspack.css" rel="stylesheet" type="text/css">
 
+	<cms:set load_true="<cms:get_cookie 'load_true' />" />
+
+	<script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
 	<script>
-
-		function myFunction(x) {
-
-			x.classList.toggle("change");
-
-		}
+		src = "/static/scripts/script.js"
 
 	</script>
 
 	<cms:embed 'font-copyright.html' />
-
-	<cms:set load_true="<cms:get_cookie 'load_true' />" />
 
 
 </head>
@@ -79,7 +76,8 @@
 					<a href="<cms:show k_page_link />"><img src="<cms:show project_heroimage />" class="imgfill"></a>
 
 					<div class="overlay"><span>
-							<cms:show k_page_title /></span>
+							<cms:show k_page_title />
+						</span>
 					</div>
 
 				</div>
@@ -90,7 +88,9 @@
 
 			<div id="grid_desc">
 
-				<p class="copyright" >Copyright &copy; <cms:date format='Y'/> &ndash; Dan Burnage</p>
+				<p class="copyright">Copyright &copy;
+					<cms:date format='Y' /> &ndash; Dan Burnage
+				</p>
 
 			</div>
 

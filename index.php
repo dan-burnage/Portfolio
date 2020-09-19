@@ -36,6 +36,8 @@
 
 	<head>
 
+		<!--INDEX.PHP — DETAILS TEMPLATE VIEW-->
+
 		<meta charset="utf-8">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -47,7 +49,6 @@
 				<cms:else />
 				Dan Burnage | Designer
 			</cms:if>
-
 
 		</title>
 
@@ -70,17 +71,19 @@
 
 		<cms:embed 'favicons.html' />
 
-		<link href="css/sitemain.css" rel="stylesheet" type="text/css">
-		<link href="css/webkit.scrollbar.css" rel="stylesheet" type="text/css">
-		<link rel="stylesheet" type="text/css" href="css/unisanspack/unisanspack.css">
+		<link href="static/sitemain.css" rel="stylesheet" type="text/css">
+		<link href="fonts/unisanspack/unisanspack.css" rel="stylesheet" type="text/css">
 
+		<cms:set load_true="<cms:get_cookie 'load_true' />" />
+
+		<script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
 		<script>
-			function myFunction(x) {
-				x.classList.toggle("change");
-			}
+			src = "/static/scripts/script.js"
+
 		</script>
 
 		<cms:embed 'font-copyright.html' />
+
 
 	</head>
 
