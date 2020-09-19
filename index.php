@@ -135,7 +135,7 @@
 
 				<div id="grid_desc">
 
-					<p><a href="index.php">Click here for more work...</a></p>
+					<p><a href="/index.php">Click here for more work...</a></p>
 
 				</div>
 

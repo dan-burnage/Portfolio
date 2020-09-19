@@ -54,7 +54,7 @@ body {
 	margin: auto;
 	margin-top: 17px;
 	margin-left: 17px;
-	background-color: #222222;
+	background-color: var(--brand-color);
 	display: block;
 	position: relative;
 }
@@ -171,14 +171,13 @@ body {
 	cursor: pointer;
 }
 
-.bar1,
-.bar2 {
+.bar1, .bar2 {
 	display: block;
 	position: relative;
 	cursor: pointer;
 	width: 30px;
 	height: 4px;
-	background-color: #222222;
+	background-color: var(--brand-color);
 	margin: 6px auto;
 	top: 10px;
 	transition: 0.4s;
@@ -242,7 +241,7 @@ body {
 	z-index: 1000;
 	pointer-events: none;
 	display: flex;
-	background-color: #222222;
+	background-color: var(--brand-color);
 	animation: 1.0s cubic-bezier(0.5, 0, 0.5, 1) 1.75s 1 forwards slide_transition_in;
 }
 
@@ -254,8 +253,8 @@ body {
 	left: 0;
 	z-index: 1000;
 	pointer-events: none;
-	background-color: #222222;
-	animation: 0.5s ease-out 0.25s 1 forwards slide_transition_in;
+	background-color: var(--brand-color);
+	animation: 0.45s ease-out 0.1s 1 forwards slide_transition_in;
 }
 
 @keyframes slide_transition_in {
@@ -280,17 +279,17 @@ body {
 	left: 0;
 	z-index: 1000;
 	pointer-events: none;
-	background-color: #222222;
+	background-color: var(--brand-color);
 	transform: translateX(100%);
 	-webkit-transform: translateX(100%);
-	transition: 0.5s;
+	transition: 0.45s;
 	transition-timing-function: ease-in;
 }
 
 html.is-leaving .transition-swup{
 	transform: translateX(0%);
 	-webkit-transform: translateX(0%);
-	transition: 0.5s;
+	transition: 0.45s;
 }
 
 .intro_logo {
@@ -303,7 +302,7 @@ html.is-leaving .transition-swup{
 	transform: translateY(-15px);
 	-webkit-transform: translateY(-15px);
 	z-index: 1000;
-	animation: 1.0s cubic-bezier(0.75, 0, 0.5, 1) 0s 1 forwards logo_transition;
+	animation: 1.25s cubic-bezier(0.75, 0, 0.5, 1) 0s 1 forwards logo_transition;
 }
 
 @keyframes logo_transition {
@@ -332,12 +331,12 @@ html.is-leaving .transition-swup{
 	width: 100%;
 	display: block;
 	margin: 0;
-	-webkit-transition: all 0.4s linear;
+	-webkit-transition: all 0.35s ease;
 }
 
 .imgfill:hover {
 	opacity: 0.2;
-	-webkit-transition: all 0.4s linear;
+	-webkit-transition: all 0.5s ease;
 }
 
 .staticimg {
@@ -356,7 +355,7 @@ html.is-leaving .transition-swup{
 	font-family: UniSansBook;
 	font-weight: lighter;
 	font-style: normal;
-	color: #222222;
+	color: var(--brand-color);
 	font-size: 15px;
 }
 
@@ -364,12 +363,20 @@ p {
 	font-family: UniSansSemiBold;
 	font-weight: normal;
 	font-style: normal;
-	color: #222222;
+	color: var(--brand-color);
 	font-size: 15px;
 }
 
 .copyright {
 	font-size: 12px;
+}
+
+.menu_label {
+	font-size: 12.5px;
+	line-height: 32px;
+	text-align: center;
+	letter-spacing: 1.5px;
+	color: var(--brand-color);
 }
 
 #grid_content .overlay {
@@ -396,44 +403,52 @@ p {
 /*------------------------------------------------------------------- */
 /* MISC CSS */
 
+
+:root {
+  --brand-color: #111111;
+}
+
 a:link,
 a:visited,
 a:hover {
-	color: #222222;
+	color: var(--brand-color);
 }
 
 a:active {
-	color: rgba(35, 35, 35, 0.70);
+	color: var(--brand-color);
+	opacity: 0.7;
 }
 
 ::selection {
-	background: rgba(35, 35, 35, 0.70);
-	/* WebKit/Blink Browsers */
+	background: var(--brand-color);
+	opacity: 0.7;
 	color: #fff;
 }
 
 ::-moz-selection {
-	background: rgba(35, 35, 35, 0.70);
-	/* Gecko Browsers */
+	background: var(--brand-color);
+	opacity: 0.7;
 	color: #fff;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
 	width: 4px;
 }
 
-::-webkit-scrollbar-track-piece{
+::-webkit-scrollbar-track-piece {
 	background-color: #fff;
 }
 
-::-webkit-scrollbar-thumb{
-	background-color: rgba(35, 35, 35, 0.50);
-	outline: 0px solid #222222;
+::-webkit-scrollbar-thumb {
+	background-color: var(--brand-color);
+	opacity: 0.5;
+	outline: 0px solid var(--brand-color);
 	outline-offset: -2px;
 	border: 0px solid #fff;
 	border-radius: 3px;
 }
 
-::-webkit-scrollbar-thumb:hover{
-	background-color: #222222;
+::-webkit-scrollbar-thumb:hover {
+	background-color: var(--brand-color);
+	opacity: 1;
 }

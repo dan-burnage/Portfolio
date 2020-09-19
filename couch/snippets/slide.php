@@ -14,4 +14,6 @@
 
 	</div>
 
+	<div id="swupBody" class="transition-swup"></div>
+
 </cms:if>
