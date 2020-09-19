@@ -6,7 +6,7 @@
 
 <cms:else />
 
-	<cms:set_cookie 'load_true' value='true' expire='5' />
+	<cms:set_cookie 'load_true' value='true' expire='300' />
 
 	<div id="intro_slide">
 

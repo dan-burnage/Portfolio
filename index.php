@@ -78,8 +78,8 @@
 
 		<cms:set load_true="<cms:get_cookie 'load_true' />" />
 
-		<script asyncsrc="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
-		<script async src ="/static/scripts/script.js"></script>
+		<script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
+		<script src ="/static/scripts/script.js"></script>
 
 		<cms:embed 'font-copyright.html' />
 
