@@ -14,7 +14,9 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-	<title><cms:get_custom_field 'page_title' masterpage='globals.php' /></title>
+	<title>
+		<cms:get_custom_field 'page_title' masterpage='globals.php' />
+	</title>
 
 	<meta name="description" content="<cms:get_custom_field 'seo_desc' masterpage='globals.php' />">
 	<meta name="theme-color" content="#111111">
@@ -86,9 +88,9 @@
 
 			<!-- --------- -->
 
-			<div id="grid_desc">
+			<div id="grid_copyright">
 
-				<p class="copyright">Copyright &copy;
+				<p>Copyright &copy;
 					<cms:date format='Y' /> &ndash; Dan Burnage
 				</p>
 

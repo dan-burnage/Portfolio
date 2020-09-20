@@ -4,23 +4,27 @@
 
 	<cms:editable name='project_description' label='Project description' type='richtext' css='/static/wysiwyg.css | /webfonts/unisans.css' order='3' />
 
-	<cms:editable name='project_heroimage' label='Hero image' type='image' order='4' />
+	<cms:editable name='project_categories' label='Project categories' desc='Check all applicable' opt_values='UI & UX | Branding | Marketing | Print | Typography | Product Design | Motion Graphics | Videography' type='checkbox' order='4' />
 
-	<cms:editable name='project_video' label='Video' desc='Check for correct Vimeo or YouTube embed link' type='text' no_xss_check='1' order='5' />
+	<cms:editable name='project_color' label='Project colour' desc='Project colour #HEX' maxlength='7' width='100px' type='text' no_xss_check='1' order='5' />
 
-	<cms:repeatable name='project_images' label='Project images' order='6'>
+	<cms:editable name='project_heroimage' label='Hero image' type='image' order='6' />
+
+	<cms:editable name='project_video' label='Video' desc='Check for correct Vimeo or YouTube embed link' type='text' no_xss_check='1' order='7' />
+
+	<cms:repeatable name='project_images' label='Project images' order='8'>
 
 		<cms:editable type='image' name='image' label='Project Images' />
 
 	</cms:repeatable>
 
-	<cms:editable name='seo_group' label='SEO information' desc='SEO, Open Graph and Twitter card data' type='group' order='7' />
+	<cms:editable name='seo_group' label='SEO information' desc='SEO, Open Graph and Twitter card data' type='group' order='9' />
 
 	<cms:editable name='page_title' label='Page title' desc='If different from global title' group='seo_group' type='text' />
 
-	<cms:editable name='seo_title' label='SEO title' desc='Recomended length: 55–60 characters' group='seo_group' type='text' />
+	<cms:editable name='seo_title' label='SEO title' desc='Recomended length: 55–60 characters' maxlength='60' group='seo_group' type='text' />
 
-	<cms:editable name='seo_desc' label='SEO description' desc='Recomended length: 150–155 characters' group='seo_group' type='textarea' />
+	<cms:editable name='seo_desc' label='SEO description' desc='Recomended length: 150–155 characters' maxlength='155' group='seo_group' type='textarea' />
 
 	<cms:editable name='seo_img' label='SEO image' desc='Recomended size: 1200px x 630px' group='seo_group' type='image' />
 
@@ -28,7 +32,7 @@
 </cms:template>
 
 
-<cms:if k_is_page>
+<cms:if k_is_page >
 
 
 	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -46,7 +50,7 @@
 
 		<title>
 
-			<cms:if page_title>
+			<cms:if page_title >
 				<cms:show page_title />
 				<cms:else />
 				Dan Burnage | Designer
@@ -79,7 +83,7 @@
 		<cms:set load_true="<cms:get_cookie 'load_true' />" />
 
 		<script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
-		<script src ="/static/scripts/script.js"></script>
+		<script src="/static/scripts/script.js"></script>
 
 		<cms:embed 'font-copyright.html' />
 
@@ -112,21 +116,46 @@
 
 						<span>
 
-							<h1><cms:show k_page_title /></h1>
+							<h1>
+								<cms:show k_page_title />
+							</h1>
 
 						</span>
 
-						<span>
+						<div id="grid_title_divider" style="background-color:<cms:if project_color><cms:show project_color /><cms:else />var(--brand-color);opacity:0.4;</cms:if>"></div>
 
-							<h5 style="text-transform:uppercase; letter-spacing:0.75px;">Branding &nbsp; | &nbsp; Print &nbsp; | &nbsp; Marketing</h5>
 
-						</span>
+						<cms:if project_categories>
+
+							<span>
+
+								<h3>
+
+									<cms:each project_categories as='cat'>
+
+										<cms:show cat /><span>&nbsp; | &nbsp;</span>
+
+									</cms:each>
+
+								</h3>
+
+							</span>
+
+						</cms:if>
 
 					</div>
+
 
 					<div id="grid_desc">
 
 						<cms:show project_description />
+
+						<a href="/" class="link_wrapper">
+
+							<img src="/static/images/icon_arrow.svg" class="link_icon">
+							<p class="link">Back to projects</p>
+
+						</a>
 
 					</div>
 
@@ -154,15 +183,9 @@
 
 				</cms:show_repeatable>
 
-				<div id="grid_desc">
+				<div id="grid_copyright">
 
-					<p><a href="/.php">Click here for more work...</a></p>
-
-				</div>
-
-				<div id="grid_desc">
-
-					<p class="copyright">Copyright &copy;
+					<p>Copyright &copy;
 						<cms:date format='Y' /> &ndash; Dan Burnage
 					</p>
 
