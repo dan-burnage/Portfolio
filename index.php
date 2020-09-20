@@ -6,19 +6,22 @@
 
 	<cms:editable name='project_categories' label='Project categories' desc='Check all applicable' opt_values='UI & UX | Branding | Marketing | Print | Typography | Product Design | Motion Graphics | Videography' type='checkbox' order='4' />
 
-	<cms:editable name='project_color' label='Project colour' desc='Project colour #HEX' maxlength='7' width='100px' type='text' no_xss_check='1' order='5' />
+	<cms:editable name='project_color' label='Project colour' desc='Project colour #HEX' maxlength='7' width='100' type='text' no_xss_check='1' order='5' />
 
-	<cms:editable name='project_heroimage' label='Hero image' type='image' order='6' />
+	<cms:editable name='project_heroimage' label='Hero image' type='image' order='6' show_preview='1' preview_width='175' width='275' />
 
-	<cms:editable name='project_video' label='Video' desc='Check for correct Vimeo or YouTube embed link' type='text' no_xss_check='1' order='7' />
+	<cms:editable name='heroimage_alt' label='Hero image alt text' type='text' order='7' />
 
-	<cms:repeatable name='project_images' label='Project images' order='8'>
+	<cms:editable name='project_video' label='Video' desc='Check for correct Vimeo or YouTube embed link' type='text' no_xss_check='1' order='8' />
 
-		<cms:editable type='image' name='image' label='Project Images' />
+	<cms:repeatable name='project_images' label='Project images' order='9'>
+
+		<cms:editable type='image' name='image' label='Project Images' show_preview='1' preview_width='175' input_width='275' col_width='300' />
+		<cms:editable type='textarea' name='image_alt' label='Image alt text' no_xss_check='1' />
 
 	</cms:repeatable>
 
-	<cms:editable name='seo_group' label='SEO information' desc='SEO, Open Graph and Twitter card data' type='group' order='9' />
+	<cms:editable name='seo_group' label='SEO information' desc='SEO, Open Graph and Twitter card data' type='group' order='10' />
 
 	<cms:editable name='page_title' label='Page title' desc='If different from global title' group='seo_group' type='text' />
 
@@ -36,7 +39,7 @@
 
 
 	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-	<html>
+	<html lang="en">
 
 	<head>
 
@@ -77,13 +80,13 @@
 
 		<cms:embed 'favicons.html' />
 
-		<link href="/static/sitemain.css" rel="stylesheet" type="text/css">
-		<link href="/webfonts/unisans.css" rel="stylesheet" type="text/css">
+		<link async href="/static/sitemain.css" rel="stylesheet" type="text/css" media="all">
+		<link aysnc href="/webfonts/unisans.css" rel="stylesheet" type="text/css" media="all">
 
 		<cms:set load_true="<cms:get_cookie 'load_true' />" />
 
-		<script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
-		<script src="/static/scripts/script.js"></script>
+		<script defer src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
+		<script defer src="/static/scripts/script.js"></script>
 
 		<cms:embed 'font-copyright.html' />
 
@@ -173,13 +176,13 @@
 
 				<div id="grid_content">
 
-					<img src="<cms:show project_heroimage />" class="staticimg">
+					<img src="<cms:show project_heroimage />" class="staticimg" alt="<cms:show heroimage_alt />">
 
 				</div>
 
 				<cms:show_repeatable 'project_images'>
 
-					<div id="grid_content"><img src="<cms:show image />" class="staticimg"></div>
+					<div id="grid_content"><img src="<cms:show image />" class="staticimg" alt="<cms:show image_alt />"></div>
 
 				</cms:show_repeatable>
 

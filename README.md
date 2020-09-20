@@ -21,3 +21,5 @@ https://github.com/CouchCMS/CouchCMS
 
 - **gtag.html** — Google analytics and search consol implimentation added on local and mirrored to live site. ***IMPORTANT*** to check correct implimentation when pushed live.
 
+- **<cms:embed > Errors** — Check for embed code inconsistencys and ensure fully closed tags to avoid failed front-end build when Couch renders snippets.
+

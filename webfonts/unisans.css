@@ -28,31 +28,38 @@
 
 
 /* @import must be at top of file, otherwise CSS will not work */
-@import url("//hello.myfonts.net/count/3c44d1");
+@import url("https://hello.myfonts.net/count/3c44d1");
 
 @font-face {
-  font-family: 'UniSans';
-  font-style: italic;
-  font-weight: bold;
-  src: url('/webfonts/unisans/italic_normal_bold.woff2') format('woff2'), url('/webfonts/unisans/italic_normal_bold.woff') format('woff');
+	font-family: 'UniSans';
+	font-style: italic;
+	font-weight: bold;
+	src: url('/webfonts/unisans/italic_normal_bold.woff2') format('woff2'), url('/webfonts/unisans/italic_normal_bold.woff') format('woff');
+	font-display: swap;
 }
+
 @font-face {
-  font-family: 'UniSans';
-  font-style: normal;
-  font-weight: bold;
-  src: url('/webfonts/unisans/normal_normal_bold.woff2') format('woff2'), url('/webfonts/unisans/normal_normal_bold.woff') format('woff');
+	font-family: 'UniSans';
+	font-style: normal;
+	font-weight: bold;
+	src: url('/webfonts/unisans/normal_normal_bold.woff2') format('woff2'), url('/webfonts/unisans/normal_normal_bold.woff') format('woff');
+	font-display: swap;
 }
+
 @font-face {
-  font-family: 'UniSans';
-  font-style: italic;
-  font-weight: normal;
-  src: url('/webfonts/unisans/italic_normal_normal.woff2') format('woff2'), url('/webfonts/unisans/italic_normal_normal.woff') format('woff');
+	font-family: 'UniSans';
+	font-style: italic;
+	font-weight: normal;
+	src: url('/webfonts/unisans/italic_normal_normal.woff2') format('woff2'), url('/webfonts/unisans/italic_normal_normal.woff') format('woff');
+	font-display: swap;
 }
+
 @font-face {
-  font-family: 'UniSans';
-  font-style: normal;
-  font-weight: normal;
-  src: url('/webfonts/UniSans/normal_normal_normal.woff2') format('woff2'), url('/webfonts/unisans/normal_normal_normal.woff') format('woff');
+	font-family: 'UniSans';
+	font-style: normal;
+	font-weight: normal;
+	src: url('/webfonts/UniSans/normal_normal_normal.woff2') format('woff2'), url('/webfonts/unisans/normal_normal_normal.woff') format('woff');
+	font-display: swap;
 }
 
 /*------------------------------------------------------------------- */
@@ -186,7 +193,7 @@ h3 span:last-child {
 @media screen and (min-width:1024px) { /* Desktop Small */
 
 	h1 {
-		font-size: 4.25vw;
+		font-size: 3.5vw;
 	}
 
 	.overlay h1 {
@@ -204,7 +211,7 @@ h3 span:last-child {
 
 }
 
-@media screen and (min-width:1440px) { /* Desktop Large */
+@media screen and (min-width:1366px) { /* Desktop Large */
 
 	h1 {
 		font-size: 3.5vw;
@@ -216,7 +223,7 @@ h3 span:last-child {
 
 }
 
-@media screen and (min-width:1720px) { /* Desktop Large */
+@media screen and (min-width:1680px) { /* Desktop Large */
 
 	h1 {
 		font-size: 3vw;

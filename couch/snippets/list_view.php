@@ -2,7 +2,7 @@
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<html>
+<html lang="en">
 
 <head>
 
@@ -74,7 +74,7 @@
 
 				<div id="grid_content">
 
-					<a href="<cms:show k_page_link />"><img src="<cms:show project_heroimage />" class="imgfill"></a>
+					<a href="<cms:show k_page_link />"><img src="<cms:show project_heroimage />" class="imgfill" alt="<cms:show image_alt />"></a>
 
 					<div class="overlay">
 						<h1>
