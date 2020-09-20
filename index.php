@@ -2,7 +2,7 @@
 
 <cms:template title='Portfolio' clonable='1'>
 
-	<cms:editable name='project_description' label='Project description' type='richtext' css='/static/wysiwyg.css | /fonts/unisanspack/unisanspack.css' order='3' />
+	<cms:editable name='project_description' label='Project description' type='richtext' css='/static/wysiwyg.css | /webfonts/unisans.css' order='3' />
 
 	<cms:editable name='project_heroimage' label='Hero image' type='image' order='4' />
 
@@ -74,7 +74,7 @@
 		<cms:embed 'favicons.html' />
 
 		<link href="/static/sitemain.css" rel="stylesheet" type="text/css">
-		<link href="/fonts/unisanspack/unisanspack.css" rel="stylesheet" type="text/css">
+		<link href="/webfonts/unisans.css" rel="stylesheet" type="text/css">
 
 		<cms:set load_true="<cms:get_cookie 'load_true' />" />
 
@@ -156,7 +156,7 @@
 
 				<div id="grid_desc">
 
-					<p><a href="/index.php">Click here for more work...</a></p>
+					<p><a href="/.php">Click here for more work...</a></p>
 
 				</div>
 

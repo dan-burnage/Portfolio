@@ -22,7 +22,6 @@ body {
 	height: inherit;
 	overflow: hidden;
 	background-color: #fff;
-	font-family: UniSansSemiBold;
 }
 
 #oncanvas-menu {
@@ -69,51 +68,90 @@ body {
 
 #flex_wrapper{
 	display: flex;
-	padding: 0 8vw;
-	max-width: 1300px;
+	position: relative;
+	margin-right: 13px;
+	margin-top: 17px;
+	margin-left: 17px;
 }
 
 #grid_title {
-	display: flex;
 	flex-wrap: wrap;
-	width: 40%;
 	position: relative;
-
 }
 
 #grid_desc {
-	display: flex;
-	width: 60%;
-	margin: 2.2vw 0 1.6vw 2.8vw;
 	position: relative;
+	flex-wrap: wrap;
 }
 
 /*------------------------------------------------------------------- */
-/* RESPONSIVE */
+/* RESPONSIVE - LAYOUT */
 
-/*@media screen and (min-width:480px) {
+@media screen { /* Mobile */
+
+	#flex_wrapper{
+
+	}
+
+	#grid_title {
+
+	}
 
 	#grid_desc {
-		width: 70%;
+		/* background-color: aqua; */
 	}
 
 }
 
-@media screen and (min-width:600px) {
+@media screen and (min-width:600px) { /* Tablet */
+	#flex_wrapper{
+
+	}
+
+	#grid_title {
+
+	}
 
 	#grid_desc {
+		/* background-color: red; */
+	}
+
+}
+
+@media screen and (min-width:1200px) { /* Desktop Small */
+
+	#flex_wrapper{
+		padding: 5vw 8vw;
+		max-width: 1300px;
+	}
+
+	#grid_title {
+		width: 45%;
+	}
+
+	#grid_desc {
+		/* background-color: orange; */
 		width: 55%;
+		margin: 2.2vw 0 1.6vw 3vw;
 	}
 
 }
 
-@media screen and (min-width:1200px) {
+@media screen and (min-width:1600px) { /* Desktop Large */
 
-	#grid_desc {
-		width: 40%;
+	#flex_wrapper{
+
 	}
 
-} */
+	#grid_title {
+
+	}
+
+	#grid_desc {
+		/* background-color: mediumpurple; */
+	}
+
+}
 
 
 /*------------------------------------------------------------------- */
@@ -354,58 +392,15 @@ html.is-leaving .transition-swup{
 	height: 100%;
 }
 
-.UniSansBook {
-	font-family: UniSansBook;
-	font-weight: lighter;
-	font-style: normal;
-	color: var(--brand-color);
-	font-size: 15px;
-}
-
-p {
-	font-family: UniSansSemiBold;
-	font-weight: normal;
-	font-style: normal;
-	color: var(--brand-color);
-	font-size: 16px;
-	line-height: 1.4em;
-}
-
-h1 {
-	font-family: UniSansSemiBold;
-	font-weight: normal;
-	font-style: normal;
-	color: var(--brand-color);
-	font-size: 52px;
-	line-height: 1.25em;
-	margin-bottom: 0em;
-}
-
-.copyright {
-	font-size: 12px;
-}
-
-.menu_label {
-	font-size: 12.5px;
-	line-height: 32px;
-	text-align: center;
-	letter-spacing: 1.5px;
-	color: var(--brand-color);
-}
-
 #grid_content .overlay {
 	position: absolute;
-	left: 5%;
-	width: 90%;
-	height: auto;
-	color: #fff;
+	width: 70%;
+	padding: 0 15%;
 	opacity: 0;
-	font-size: 3vw;
-	font-family: UniSansSemiBold;
 	pointer-events: none;
-	text-align: center;
 	top: 45%;
 	-webkit-transition: all 0.3s linear;
+	transform: translateY(-30%);
 }
 
 #grid_content:hover .overlay {

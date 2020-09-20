@@ -36,7 +36,7 @@
 	<cms:embed 'favicons.html' />
 
 	<link href="/static/sitemain.css" rel="stylesheet" type="text/css">
-	<link href="/fonts/unisanspack/unisanspack.css" rel="stylesheet" type="text/css">
+	<link href="/webfonts/unisans.css" rel="stylesheet" type="text/css">
 
 	<cms:set load_true="<cms:get_cookie 'load_true' />" />
 
@@ -74,9 +74,10 @@
 
 					<a href="<cms:show k_page_link />"><img src="<cms:show project_heroimage />" class="imgfill"></a>
 
-					<div class="overlay"><span>
+					<div class="overlay">
+						<h1>
 							<cms:show k_page_title />
-						</span>
+						</h1>
 					</div>
 
 				</div>

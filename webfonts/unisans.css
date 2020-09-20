@@ -1,0 +1,147 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3949777, 2020-09-19T19:00:15-0400
+ *
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are
+ * explicitly restricted from using the Licensed Webfonts(s).
+ *
+ * You may obtain a valid license at the URLs below.
+ *
+ * Webfont: UniSansSemiBoldItalic by Fontfabric
+ * URL: https://www.myfonts.com/fonts/font-fabric/uni-sans/semi-bold-italic/
+ *
+ * Webfont: UniSansRegularItalic by Fontfabric
+ * URL: https://www.myfonts.com/fonts/font-fabric/uni-sans/regular-italic/
+ *
+ * Webfont: UniSansRegular by Fontfabric
+ * URL: https://www.myfonts.com/fonts/font-fabric/uni-sans/regular/
+ *
+ * Webfont: UniSansSemiBold by Fontfabric
+ * URL: https://www.myfonts.com/fonts/font-fabric/uni-sans/semi-bold/
+ *
+ *
+ * Webfonts copyright: Copyright (c) 2014 by &amp;#x00A9; 2009 Designed by Svetoslav Simov &amp;#x00A9; Fontfabric, Inc. All rights reserved.
+ *
+ * © 2020 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/3c44d1");
+
+@font-face {
+  font-family: 'UniSans';
+  font-style: italic;
+  font-weight: bold;
+  src: url('/webfonts/unisans/italic_normal_bold.woff2') format('woff2'), url('/webfonts/unisans/italic_normal_bold.woff') format('woff');
+}
+@font-face {
+  font-family: 'UniSans';
+  font-style: normal;
+  font-weight: bold;
+  src: url('/webfonts/unisans/normal_normal_bold.woff2') format('woff2'), url('/webfonts/unisans/normal_normal_bold.woff') format('woff');
+}
+@font-face {
+  font-family: 'UniSans';
+  font-style: italic;
+  font-weight: normal;
+  src: url('/webfonts/unisans/italic_normal_normal.woff2') format('woff2'), url('/webfonts/unisans/italic_normal_normal.woff') format('woff');
+}
+@font-face {
+  font-family: 'UniSans';
+  font-style: normal;
+  font-weight: normal;
+  src: url('webFonts/UniSans/normal_normal_normal.woff2') format('woff2'), url('/webfonts/unisans/normal_normal_normal.woff') format('woff');
+}
+
+/*------------------------------------------------------------------- */
+/* TYPESTYLES */
+
+body {
+	font-family: UniSans;
+}
+
+p {
+	color: var(--font-color);
+	font-size: 16px;
+	line-height: 24px;
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: UniSans;
+	font-style: normal;
+	color: var(--font-color);
+}
+
+h1 {
+	font-size: 4vw;
+	font-weight: bold;
+	letter-spacing: 0.05vw;
+	line-height: 1.25em;
+	margin-bottom: 0em;
+}
+
+.overlay h1 {
+	color: #fff;
+	text-align: center;
+}
+
+h2 {
+
+}
+
+h3 {
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 28px;
+}
+
+.p_small {
+	font-size: 13px;
+}
+
+.menu_label {
+	font-weight: bold;
+	color: var(--font-color);
+	font-size: 12.5px;
+	line-height: 32px;
+	text-align: center;
+	letter-spacing: 1.5px;
+}
+
+
+/*------------------------------------------------------------------- */
+/* RESPONSIVE - TYPESTYLES */
+
+@media screen { /* Mobile */
+
+
+
+}
+
+@media screen and (min-width:600px) { /* Tablet */
+
+
+
+}
+
+@media screen and (min-width:1200px) { /* Desktop Small */
+
+
+
+}
+
+@media screen and (min-width:1600px) { /* Desktop Large */
+
+
+
+}
+
+
+/*------------------------------------------------------------------- */
+/* Variables */
+
+:root {
+  --font-color: #111111;
+}
