@@ -2,7 +2,7 @@
 
 <cms:template title='Global Settings' >
 
-	<cms:editable name='about_me' label='About me' desc='Info pannel description' type='richtext' css='/static/wysiwyg.css | /fonts/unisanspack/unisanspack.css'/>
+	<cms:editable name='about_me' label='About me' desc='Info pannel description' type='richtext' css='/static/wysiwyg.css | /webfonts/unisans.css'/>
 
 	<cms:editable name='seo_group' label='SEO information' desc='SEO, Open Graph and Twitter card data - Shown on list view' type='group' order='2' />
 
@@ -15,5 +15,8 @@
 	<cms:editable name='seo_img' label='SEO image' desc='Recomended size: 1200px x 630px' group='seo_group' type='image' />
 
 </cms:template>
+
+<cms:set_cookie 'load_true' value='false' expire='10' />
+<cms:redirect url='/' />
 
 <?php COUCH::invoke(); ?>
