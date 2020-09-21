@@ -61,22 +61,22 @@
 
 		</title>
 
-		<meta name="description" content="<cms:show seo_desc />">
-		<meta name="theme-color" content="#111111">
+		<cms:if seo_desc><meta name="description" content="<cms:show seo_desc />"></cms:if>
+		<meta name="theme-color" content="<cms:if project_color><cms:show project_color /><cms:else />#111111</cms:if>">
 
 		<!-- Open Graph data -->
-		<meta property="og:title" content="<cms:show seo_title />">
+		<cms:if seo_title><meta property="og:title" content="<cms:show seo_title />"></cms:if>
 		<meta property="og:url" content="<cms:show k_page_link />">
 		<meta property="og:type" content="website">
-		<meta property="og:description" content="<cms:show seo_desc />">
-		<meta property="og:image" content="<cms:show seo_img />">
+		<cms:if seo_desc><meta property="og:description" content="<cms:show seo_desc />"></cms:if>
+		<cms:if seo_img><meta property="og:image" content="<cms:show seo_img />"></cms:if>
 
 		<!-- Twitter card data -->
 		<meta name="twitter:card" content="summary">
 		<meta name="twitter:site" content="">
-		<meta name="twitter:title" content="<cms:show seo_title />">
-		<meta name="twitter:description" content="<cms:show seo_desc />">
-		<meta name="twitter:image" content="<cms:show seo_img />">
+		<cms:if seo_title><meta name="twitter:title" content="<cms:show seo_title />"></cms:if>
+		<cms:if seo_desc><meta name="twitter:description" content="<cms:show seo_desc />"></cms:if>
+		<cms:if seo_img><meta name="twitter:image" content="<cms:show seo_img />"></cms:if>
 
 		<cms:embed 'favicons.html' />
 

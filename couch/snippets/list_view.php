@@ -90,11 +90,18 @@
 
 			<div id="grid_copyright">
 
-				<p>Copyright &copy;
-					<cms:date format='Y' /> &ndash; Dan Burnage
-				</p>
+					<p>Copyright &copy; Dan Burnage &nbsp;<cms:date format='Y' />&nbsp; &nbsp;  | &nbsp;
+					</p>
 
-			</div>
+					<a href="https://www.instagram.com/dan.burnage/" >
+						<img src="/static/images/icon_instagram2.svg" class="social_icon">
+					</a>
+
+					<a href="https://www.linkedin.com/in/dan-burnage-27b074112/" >
+						<img src="/static/images/icon_linkedin2.svg" class="social_icon">
+					</a>
+
+				</div>
 
 		</div>
 

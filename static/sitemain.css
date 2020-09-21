@@ -115,7 +115,7 @@ body {
 
 	#grid_title {
 		width: 100%;
-		margin: 0vw 3vw;
+		margin: 3vw 3vw;
 	}
 
 	#grid_desc {
@@ -177,7 +177,7 @@ body {
 
 	#grid_desc {
 		width: 60%;
-		margin: 2vw 0 1.6vw 3vw;
+		margin: 0.5vw 0 1.6vw 3vw;
 	}
 
 	#grid_title_divider {
@@ -186,7 +186,7 @@ body {
 
 }
 
-@media screen and (min-width:1440px) {
+@media screen and (min-width:1366px) {
 	/* Desktop Large */
 
 	#flex_wrapper {
@@ -194,7 +194,7 @@ body {
 	}
 
 	#grid_desc {
-		margin: 2.5vw 0 1.6vw 3vw;
+		margin: 1vw 0 1.6vw 3vw;
 	}
 
 	#grid_copyright {
@@ -340,19 +340,19 @@ body {
 	transition: 0.2s ease;
 }
 
-@media screen and (min-width:1250px) {
+@media (hover: hover) {
 	/* Link hover query*/
 
 	.link {
 		opacity: 0.6;
-		transform: translateX(-28px);
-		-webkit-transform: translateX(-28px);
+		transform: translateX(-31px);
+		-webkit-transform: translateX(-31px);
 	}
 
 	.link_icon {
 		opacity: 0;
-		transform: translateX(-28px);
-		-webkit-transform: translateX(-28px);
+		transform: translateX(-31px);
+		-webkit-transform: translateX(-31px);
 	}
 
 	.link_wrapper:hover .link_icon {
