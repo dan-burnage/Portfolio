@@ -532,14 +532,13 @@ a:any-link {
 	color: var(--brand-color);
 }
 
-p a:link,
-p a:visited {
+p a:link, p a:visited, h1 a:link, h1 a:visited, h2 a:link, h2 a:visited, h3:link, h3 a:visited, h4 a:link, h4 a:visited {
 	color: var(--brand-color);
 	opacity: 0.6;
 	transition: 0.2s;
 }
 
-p a:hover {
+p a:hover, h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover {
 	opacity: 1;
 	transition: 0.2s;
 }

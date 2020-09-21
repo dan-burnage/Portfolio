@@ -191,11 +191,11 @@
 					<p>Copyright &copy; Dan Burnage &nbsp;<cms:date format='Y' />&nbsp; &nbsp;  | &nbsp;
 					</p>
 
-					<a href="https://www.instagram.com/dan.burnage/" >
+					<a href="https://www.instagram.com/dan.burnage/" target="_blank" >
 						<img src="/static/images/icon_instagram2.svg" class="social_icon">
 					</a>
 
-					<a href="https://www.linkedin.com/in/dan-burnage-27b074112/" >
+					<a href="https://www.linkedin.com/in/dan-burnage-27b074112/" target="_blank">
 						<img src="/static/images/icon_linkedin2.svg" class="social_icon">
 					</a>
 
