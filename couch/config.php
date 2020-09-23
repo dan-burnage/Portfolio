@@ -42,13 +42,13 @@
     define( 'K_DB_NAME', 'danburnage_com' );
     // 5.
     // Database username
-    define( 'K_DB_USER', 'root' );
+    define( 'K_DB_USER', 'danburnage_com' );
     // 6.
     // Database password
-    define( 'K_DB_PASSWORD', 'Whyisthispasswordsolong?' );
+    define( 'K_DB_PASSWORD', '3sAgYJkT' );
     // 7.
     // MySQL hostname (it will usually be 'localhost')
-    define( 'K_DB_HOST', 'localhost' );
+    define( 'K_DB_HOST', 'danburnage.com.mysql' );
     // 7b.
     // Needed only if multiple instances of this CMS are to be installed in the same database
     // (please use only alphanumeric characters or underscore (NO hyphen))
@@ -57,7 +57,7 @@
     // 8.
     // Set the following to '1' if you wish to enable Pretty URLS.
     // After enabling it, use gen_htaccess.php to generate an .htaccess file and place it in the root folder of your site.
-    define( 'K_PRETTY_URLS', 0 );
+    define( 'K_PRETTY_URLS', 1 );
 
     // 9.
     // If set, CMS will cache generated pages and serve them if possible.
