@@ -58,7 +58,7 @@
 	font-family: 'UniSans';
 	font-style: normal;
 	font-weight: normal;
-	src: url('/webfonts/UniSans/normal_normal_normal.woff2') format('woff2'), url('/webfonts/unisans/normal_normal_normal.woff') format('woff');
+	src: url('/webfonts/uniSans/normal_normal_normal.woff2') format('woff2'), url('/webfonts/unisans/ .woff') format('woff');
 	font-display: swap;
 }
 
@@ -87,11 +87,6 @@ h1, h2, h3, h4, h5 {
 
 /*------------------------------------------------------------------- */
 /* SELECTORS */
-
-.overlay h1 {
-	color: #fff;
-	text-align: center;
-}
 
 h3 span:last-child {
   display: none;
@@ -147,7 +142,9 @@ h3 span:last-child {
 		line-height: 23px;
 	}
 
-	.overlay h1 {
+	.overlay {
+		color: #fff;
+		text-align: center;
 		font-size: 5vw;
 	}
 
@@ -170,7 +167,7 @@ h3 span:last-child {
 		font-size: 5vw;
 	}
 
-	.overlay h1 {
+	.overlay {
 		font-size: 5vw;
 	}
 
@@ -196,7 +193,7 @@ h3 span:last-child {
 		font-size: 3.5vw;
 	}
 
-	.overlay h1 {
+	.overlay {
 		font-size: 4vw;
 	}
 

@@ -66,7 +66,7 @@
 
 	<div id="contentarea">
 
-		<div id="grid_container">
+		<main id="grid_container">
 
 			<!-- --------- -->
 
@@ -74,13 +74,15 @@
 
 				<div id="grid_content">
 
-					<a href="<cms:show k_page_link />"><img src="<cms:show project_heroimage />" class="imgfill" alt="<cms:show image_alt />"></a>
+					<a href="<cms:show k_page_link />">
 
-					<div class="overlay">
-						<h1>
+						<img src="<cms:show project_heroimage />" class="imgfill" alt="<cms:show heroimage_alt />">
+
+						<h1 class="overlay">
 							<cms:show k_page_title />
 						</h1>
-					</div>
+
+					</a>
 
 				</div>
 
@@ -88,22 +90,9 @@
 
 			<!-- --------- -->
 
-			<div id="grid_copyright">
+			<cms:embed 'copyright.html' />
 
-					<p>Copyright &copy; Dan Burnage &nbsp;<cms:date format='Y' />&nbsp; &nbsp;  | &nbsp;
-					</p>
-
-					<a href="https://www.instagram.com/dan.burnage/" >
-						<img src="/static/images/icon_instagram2.svg" class="social_icon">
-					</a>
-
-					<a href="https://www.linkedin.com/in/dan-burnage-27b074112/" >
-						<img src="/static/images/icon_linkedin2.svg" class="social_icon">
-					</a>
-
-				</div>
-
-		</div>
+		</main>
 
 		<cms:embed 'menu.html' />
 

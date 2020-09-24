@@ -415,9 +415,9 @@ body {
 	padding: 0 15%;
 	opacity: 0;
 	pointer-events: none;
-	top: 45%;
+	top: 42.5%;
 	-webkit-transition: all 0.3s linear;
-	transform: translateY(-40%);
+	transform: translateY(-42.5%);
 }
 
 #grid_content:hover .overlay {
