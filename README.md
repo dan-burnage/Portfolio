@@ -23,5 +23,5 @@ https://github.com/CouchCMS/CouchCMS
 
 - **<cms:embed > Errors** — Check for embed code inconsistencys and ensure fully closed tags to avoid failed front-end build when Couch renders snippets.
 
-– **.htaccess** — Rebuild .htaccess for SSL and CouchCMS 'PrettyURLs' compliance
+- **.htaccess** — Rebuild .htaccess for SSL and CouchCMS 'PrettyURLs' compliance
 
