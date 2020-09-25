@@ -1,6 +1,6 @@
 <?php require_once( 'couch/cms.php' ); ?>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html lang="en">
 
@@ -76,11 +76,11 @@
 
 					<a href="<cms:show k_page_link />">
 
-						<img src="<cms:show project_heroimage />" class="imgfill" alt="<cms:show heroimage_alt />">
-
 						<h1 class="overlay">
-							<cms:show k_page_title />
+								<cms:show k_page_title />
 						</h1>
+
+						<img src="<cms:show project_heroimage />" class="imgfill" alt="<cms:show heroimage_alt />">
 
 					</a>
 

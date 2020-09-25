@@ -390,6 +390,7 @@ body {
 	display: block;
 	margin: 0;
 	-webkit-transition: all 0.35s ease;
+	background-color: var(--brand-color);
 }
 
 .imgfill:hover {
@@ -418,6 +419,9 @@ body {
 	top: 42.5%;
 	-webkit-transition: all 0.3s linear;
 	transform: translateY(-42.5%);
+	z-index: 1;
+	text-align: center;
+	color: #ffffff;
 }
 
 #grid_content:hover .overlay {

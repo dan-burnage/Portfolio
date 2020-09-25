@@ -10,7 +10,7 @@
 
 	<div id="intro_slide">
 
-		<img src="/static/images/marque.svg" class="intro_logo">
+		<img src="/static/images/marque.svg" class="intro_logo" alt="Dan Burnage introduction icon">
 
 	</div>
 

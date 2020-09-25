@@ -96,6 +96,11 @@ h3 span:last-child {
 	opacity: .6;
 }
 
+.overlay  {
+	color: #fff;
+	text-align: center;
+}
+
 
 /*------------------------------------------------------------------- */
 /* RESPONSIVE - TYPESTYLES */
@@ -142,9 +147,7 @@ h3 span:last-child {
 		line-height: 23px;
 	}
 
-	.overlay {
-		color: #fff;
-		text-align: center;
+	.overlay  {
 		font-size: 5vw;
 	}
 
@@ -167,7 +170,7 @@ h3 span:last-child {
 		font-size: 5vw;
 	}
 
-	.overlay {
+	.overlay  {
 		font-size: 5vw;
 	}
 
@@ -193,7 +196,7 @@ h3 span:last-child {
 		font-size: 3.5vw;
 	}
 
-	.overlay {
+	.overlay  {
 		font-size: 4vw;
 	}
 
