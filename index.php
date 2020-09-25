@@ -38,8 +38,10 @@
 <cms:if k_is_page >
 
 
-	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<!DOCTYPE html>
+
 	<html lang="en">
+
 
 	<head>
 
@@ -110,7 +112,7 @@
 
 		<div id="contentarea">
 
-			<div id="grid_container">
+			<main id="grid_container">
 
 				<div id="flex_wrapper">
 
@@ -186,22 +188,9 @@
 
 				</cms:show_repeatable>
 
-				<div id="grid_copyright">
+				<cms:embed 'copyright.html' />
 
-					<p>Copyright &copy; Dan Burnage &nbsp;<cms:date format='Y' />&nbsp; &nbsp;  | &nbsp;
-					</p>
-
-					<a href="https://www.instagram.com/dan.burnage/" target="_blank" >
-						<img src="/static/images/icon_instagram2.svg" class="social_icon">
-					</a>
-
-					<a href="https://www.linkedin.com/in/dan-burnage-27b074112/" target="_blank">
-						<img src="/static/images/icon_linkedin2.svg" class="social_icon">
-					</a>
-
-				</div>
-
-			</div>
+			</main>
 
 			<cms:embed 'menu.html' />
 

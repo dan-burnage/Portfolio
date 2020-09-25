@@ -88,11 +88,11 @@
 
     // 13.
     // Your Email address. Will be used in contact forms.
-    define( 'K_EMAIL_TO', 'youremail@gmail.com' );
+    define( 'K_EMAIL_TO', 'info@danburnage.com' );
 
     // 14.
     // Will be used as the sender of messages delivered by contact forms to the address above.
-    define( 'K_EMAIL_FROM', 'contact@yourdomain.com' );
+    define( 'K_EMAIL_FROM', 'contact@danburnage.com' );
 
     // 15.
     // By default the inbuilt php function 'mail()' is used to deliver messages.
@@ -118,7 +118,7 @@
     // Some valid values are: AUD (Australian Dollar), CAD (Canadian Dollar), EUR (Euro),
     // GBP (Pound Sterling), JPY (Japanese Yen) and USD (U.S. Dollar).
     // Please check PayPal to find yours.
-    define( 'K_PAYPAL_CURRENCY', 'USD' );
+    define( 'K_PAYPAL_CURRENCY', 'GBP' );
 
     // 20.
     // A setting of '1' will necessitate the admin to approve comments before they get published.
