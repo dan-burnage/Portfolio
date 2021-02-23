@@ -58,7 +58,7 @@
 	font-family: 'UniSans';
 	font-style: normal;
 	font-weight: normal;
-	src: url('/webfonts/uniSans/normal_normal_normal.woff2') format('woff2'), url('/webfonts/unisans/ .woff') format('woff');
+	src: url('/webfonts/unisans/normal_normal_normal.woff2') format('woff2'), url('/webfonts/unisans/ .woff') format('woff');
 	font-display: swap;
 }
 
