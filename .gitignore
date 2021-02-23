@@ -37,7 +37,7 @@ ehthumbs.db
 Thumbs.db
 
 # Local build configuration #
-######################
+#####################
 /.htaccess
 /.htpasswd
 /couch/config.php
