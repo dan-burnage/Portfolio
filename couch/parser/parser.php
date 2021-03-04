@@ -99,8 +99,9 @@
         function set( $varname, $value, $scope='', $obj_to_array=0 ){
             global $FUNCS;
 
-            if( is_bool($value) ){ $value = (int)$value; }
-            if( $obj_to_array && (is_array($value) || is_object($value)) ){
+            if( is_null($value) ){ $value = ''; }
+            elseif( is_bool($value) ){ $value = (int)$value; }
+            elseif( $obj_to_array && (is_array($value) || is_object($value)) ){
                 $value = $FUNCS->json_decode( $FUNCS->json_encode($value) ); // recursively converts all objects to arrays
             }
 

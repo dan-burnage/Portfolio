@@ -42,16 +42,15 @@
         error_reporting(E_ALL & ~E_NOTICE); // Report all errors except notices
     }
     // Since PHP 5.1.0 every call to a date/time function generates a E_NOTICE if the timezone isn't valid,
-    if( version_compare( phpversion(), '5.1.0', '>=' ) ){
-        date_default_timezone_set("America/New_York");
+    if( !ini_get('date.timezone') || !date_default_timezone_set(ini_get('date.timezone')) ){
+        date_default_timezone_set( "America/New_York" );
     }
-
 
 
     if( !defined('K_COUCH_DIR') ) die(); // cannot be loaded directly
 
-    define( 'K_COUCH_VERSION', '2.1' ); // Changes with every release
-    define( 'K_COUCH_BUILD', '20180519' ); // YYYYMMDD - do -
+    define( 'K_COUCH_VERSION', '2.2.1' ); // Changes with every release
+    define( 'K_COUCH_BUILD', '20190417' ); // YYYYMMDD - do -
 
     if( file_exists(K_COUCH_DIR.'config.php') ){
         require_once( K_COUCH_DIR.'config.php' );
@@ -68,7 +67,12 @@
     if( !defined('K_PAID_LICENSE') ) define( 'K_PAID_LICENSE', 0 );
     if( !defined('K_REMOVE_FOOTER_LINK') ) define( 'K_REMOVE_FOOTER_LINK', 0 );
 
-    if ( !defined('K_HTTPS') ) define( 'K_HTTPS', (isset($_SERVER['HTTPS']) && strtolower($_SERVER['HTTPS'])=='on') ? 1 : 0 );
+    if( !defined('K_HTTPS') ) define( 'K_HTTPS', (
+        ( isset($_SERVER['HTTPS']) && (strtolower($_SERVER['HTTPS'])=='on' || strval($_SERVER['HTTPS'])=='1') ) ||
+        ( isset($_SERVER['SERVER_PORT']) && $_SERVER['SERVER_PORT']=='443' ) ||
+        ( isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO']=='https' ) ||
+        ( isset($_SERVER['HTTP_X_FORWARDED_SSL']) && strtolower($_SERVER['HTTP_X_FORWARDED_SSL'])=='on')
+    ) ? 1 : 0 );
 
     // Check if a cached version of the requested page may be used
     if ( !K_SITE_OFFLINE && !defined('K_ADMIN') && K_USE_CACHE && $_SERVER['REQUEST_METHOD']!='POST' ){

@@ -91,6 +91,7 @@ body {
 
 #grid_copyright {
 	display: flex;
+	flex-wrap: wrap;
 	position: relative;
 	margin-right: 13px;
 	margin-left: 17px;
@@ -134,6 +135,14 @@ body {
 	.link_icon {
 		margin: auto 8px auto 0px;
 	}
+
+	#attribution {
+		flex-wrap: wrap;
+		opacity: 0.3;
+		margin-top: 2px !important;
+		margin-left: 8px;
+		text-decoration: none;
+	}
 }
 
 @media screen and (min-width:600px) {
@@ -154,6 +163,12 @@ body {
 	#grid_desc {
 		width: 100%;
 		margin: 0vw 2vw 0vw 0vw;
+	}
+
+	#attribution {
+		flex-wrap: wrap;
+		opacity: 0.2;
+		margin-left: auto !important;
 	}
 
 }
@@ -370,18 +385,26 @@ body {
 
 .social_icon {
 	height: 17px;
-	margin: auto 5px auto 8px;
-	display: block;
-	opacity: 1;
+	margin: 0 4px 0 0;
+	display: inline-block;
+	opacity: 0.5;
 	transition: 0.2s ease;
+	transform: translateY(4px);
+}
+.social_icon.last {
+	margin: 0 10px 0 0 !important;
 }
 
 .social_icon:hover {
-	opacity: 0.6;
+	opacity: 1;
 }
 
 #grid_copyright a {
-	display: flex;
+	display: inline-flex;
+}
+
+#grid_copyright p {
+	margin: 0px 0 0 0;
 }
 
 

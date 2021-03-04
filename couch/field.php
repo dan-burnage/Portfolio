@@ -82,6 +82,7 @@
         var $custom_params;
         var $searchable;
         var $class;
+        var $not_active;
 
 
         var $page;
@@ -100,6 +101,7 @@
         var $no_js = 0;
         var $orig_data = null;
         var $module = null;
+        var $k_inactive = 0;
 
         var $no_render = 0;
 
@@ -184,6 +186,10 @@
             $this->siblings = &$siblings;
         }
 
+        public function __toString(){
+            return get_class();
+        }
+
         // Invoked only while editing a page where all parameters of a field (instead of just the usual data) are needed.
         function resolve_dynamic_params(){
             if( !$this->system && $this->dynamic ){
@@ -216,7 +222,7 @@
 
         function store_posted_changes( $post_val ){
             global $FUNCS, $Config;
-            if( $this->deleted ) return; // no need to store
+            if( $this->deleted || $this->k_inactive ) return; // no need to store
             if( in_array($this->k_type, array('thumbnail', 'hidden', 'message', 'group')) ) return;
 
             if( $this->k_type== 'checkbox' && is_array($post_val) ){
@@ -339,7 +345,7 @@
         // Used primarily for display on front-end (by feeding the content of this field into $CTX ) but is
         // also used by _render() of built-in fields to render the field in admin panel.
         function get_data(){
-            global $Config;
+            global $Config, $CTX;
 
             if( !$this->data ){
                 // make sure it is not numeric 0
@@ -365,6 +371,16 @@
                         $data = $domain_prefix . $data;
                     }
                 }
+                elseif( $this->k_type=='checkbox' ){
+                    $arr_data = array();
+                    if( strlen($data) ){
+                        $sep = ( $this->k_separator ) ? $this->k_separator : '|';
+                        $arr_data = array_map( function($item)use($sep){
+                            return trim( str_replace( '\\'.$sep, $sep, $item ) ); //unescape separator
+                        }, preg_split( "/(?<!\\\)".preg_quote($sep, '/')."/", $data ) );
+                    }
+                    $CTX->set( '__'.$this->name, $arr_data );
+                }
             }
 
             return $data;
@@ -373,7 +389,7 @@
         function validate(){
             global $FUNCS;
 
-            if( $this->deleted ) return true; // skip deleted fields
+            if( $this->deleted || $this->k_inactive ) return true; // skip deleted fields
             if( $this->page->tpl_nested_pages && !$this->system && $this->page->_fields['k_is_pointer']->get_data() ) return true; // skip custom fields if this nested page is a pointer_page
 
             $this->err_msg = '';
@@ -1012,7 +1028,7 @@
 
         function store_posted_changes( $post_val ){
             global $FUNCS;
-            if( $this->k_type=='hidden' ) return;
+            if( $this->k_type=='hidden' || $this->k_inactive ) return;
 
             if( $this->k_type== 'checkbox' && is_array($post_val) ){
                 $separator = ( $this->k_separator ) ? $this->k_separator : '|';
@@ -1097,6 +1113,7 @@
 
         function validate(){
             global $FUNCS;
+            if( $this->k_inactive ) return true;
 
             if( $this->k_type=='captcha' ){
                 if ( session_id() == '' ) { // session needed for validation
@@ -1292,6 +1309,8 @@
         }
 
         function store_posted_changes( $post_val ){
+            if( $this->deleted || $this->k_inactive ) return; // no need to store
+
             $post_val = trim( $post_val );
             if( $post_val !== '1' ){ $post_val = '0'; }
 
@@ -1400,7 +1419,7 @@
     class KLinkUrlField extends KField{
         function store_posted_changes( $post_val ){
             global $FUNCS;
-            if( $this->deleted ) return; // no need to store
+            if( $this->deleted || $this->k_inactive ) return; // no need to store
 
             if( is_null($this->orig_data) ) $this->orig_data = $this->data;
 
@@ -1512,7 +1531,7 @@
         // Posted data
         function store_posted_changes( $post_val ){
             global $FUNCS;
-            if( $this->deleted ) return; // no need to store
+            if( $this->deleted || $this->k_inactive ) return; // no need to store
 
             if( is_null($this->orig_data) ) $this->orig_data = $this->data;
             $this->data = $FUNCS->cleanXSS( $post_val );
@@ -1640,6 +1659,8 @@
         // Handle Posted data
         function store_posted_changes( $post_val ){
             global $FUNCS;
+
+            if( $this->k_inactive ) return; // no need to store
 
             if( is_null($this->orig_data) ) $this->orig_data = $this->data;
             $this->data = $FUNCS->cleanXSS( $post_val );
