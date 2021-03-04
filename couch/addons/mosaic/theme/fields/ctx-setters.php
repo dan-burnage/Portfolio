@@ -47,6 +47,20 @@
                         }
                     }
 
+                    if( $f->only_time ){
+                        $h = substr( $date, 11, 2 );
+                        $m = substr( $date, 14, 2 );
+
+                        if( $f->am_pm ){
+                            // 24-hour time to 12-hour time
+                            list( $h, $m, $a ) = explode( ":", @date("h:i:A", strtotime("$h:$m")) );
+                            $formatted_date = "$h:$m $a";
+                        }
+                        else{
+                            $formatted_date = "$h:$m";
+                        }
+                    }
+
                     $CTX->set( 'k_date_formatted', $formatted_date );
                 }
             }
