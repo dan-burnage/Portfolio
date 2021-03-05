@@ -363,6 +363,7 @@
                     $CTX->set( 'k_level', $level );
 
                     if( $extended_info ){
+                        $this->children[$x]->set_in_context();
                         $CTX->set( 'k_element_end', 1 ); //e.g. </LI>
                         call_user_func_array( $callback, array(&$this->children[$x], &$param0, &$param1) );
                         $CTX->set( 'k_element_end', 0 );
@@ -427,7 +428,7 @@
 
             if( $this->image ){
                 $data = $this->image;
-                if( $data{0}==':' ){ // if marker
+                if( $data[0]==':' ){ // if marker
                     $data = substr( $data, 1 );
                     $domain_prefix = $Config['k_append_url'] . $Config['UserFilesPath'] . 'image/';
                     $data = $domain_prefix . $data;
@@ -868,7 +869,7 @@
 
                 // add domain info to internal links
                 $data = $this->pointer_link;
-                if( $data{0}==':' ){ // if marker, it is an internal link
+                if( $data[0]==':' ){ // if marker, it is an internal link
                     $this->is_internal_link = 1;
 
                     $data = substr( $data, 1 );
