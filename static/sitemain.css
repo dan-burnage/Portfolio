@@ -387,16 +387,19 @@ body {
 	height: 17px;
 	margin: 0 4px 0 0;
 	display: inline-block;
-	opacity: 0.5;
+	opacity: 1;
 	transition: 0.2s ease;
 	transform: translateY(4px);
 }
 .social_icon.last {
 	margin: 0 10px 0 0 !important;
+	opacity: 1;
+	transition: 0.2s ease;
 }
 
 .social_icon:hover {
 	opacity: 1;
+	transition: 0.2s ease;
 }
 
 #grid_copyright a {

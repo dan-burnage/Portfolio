@@ -285,7 +285,7 @@
             if( $post_val ){
                 // check if '+' or '-' specified
                 $post_val = trim( $post_val );
-                $op = $post_val{0};
+                $op = $post_val[0];
                 if( $op=='+' || $op=='-' ){
                     $post_val = substr( $post_val, 1 );
                 }
@@ -336,6 +336,12 @@
                 return false;
             }
             return true;
+        }
+
+        function get_data( $for_ctx=0 ){
+            if( $for_ctx ){
+                return implode( ',', $this->items_selected );
+            }
         }
 
         // Save to database.
