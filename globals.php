@@ -14,6 +14,12 @@
 
 	<cms:editable name='seo_img' label='SEO image' desc='Recomended size: 1200px x 630px' group='seo_group' type='image' />
 
+	<cms:editable name='site_settings' label='Site Settings' type='group' order='3' />
+
+	<cms:editable name='php_version' type="message" group='site_settings'>
+			<?php echo 'PHP version: ' . phpversion(); ?>
+    </cms:editable>
+
 </cms:template>
 
 <cms:set_cookie 'load_true' value='false' expire='10' />
