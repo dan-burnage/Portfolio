@@ -47,7 +47,7 @@
 
 		<!--INDEX.PHP — DETAILS TEMPLATE VIEW-->
 
-		<cms:embed 'gtag.html' />
+		<cms:embed 'gtag-head.html' />
 
 		<meta charset="utf-8">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -98,6 +98,8 @@
 
 
 	<body>
+
+		<cms:embed 'gtag-body.html' />
 
 		<cms:embed 'slide.php' />
 
